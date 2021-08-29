@@ -1,5 +1,7 @@
-# Chat-Bot for [Twitch](https://www.twitch.tv)
+# Chat Bot for [Twitch](https://www.twitch.tv)
 
+## Functions
++ Timeout username on channel for the words from your own Ban Words List.
 
 
 ## Get Started
@@ -29,10 +31,14 @@ export default {
 
 _OAuth token you can get [here](http://twitchapps.com/tmi/)._
 
-### 5. Create list of ban-words:
+### 5. Create list of ban words:
 
 `./twitch-bot/config/constants.js`
 ```js
+export const constants = {
+  banWordTimeout: 300, //seconds for timeout username
+};
+
 export const banWords = ["some_bad_word",...,"another_bad_word"];
 ```
 
