@@ -8,7 +8,7 @@ export const isBan = (message) => {
   const regexStr = banWords.reduce((str = "", word) => {
     const wordMod = word
       .split("")
-      .reduce((subStr = "", char) => `${subStr}${char}+[_\\s\\W]*`, "");
+      .reduce((subStr = "", char) => `${subStr}${char}+[^a-zA-Zа-яА-Я]*`, "");
 
     return `${str.length > 0 ? `${str}|` : ""}${wordMod}`;
   }, "");
