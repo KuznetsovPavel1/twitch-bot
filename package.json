@@ -5,8 +5,8 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "bot": "nodemon server.js"
+    "start": "node --exec babel-node server.js",
+    "bot": "nodemon --exec babel-node server.js"
   },
   "author": "",
   "license": "MIT",
@@ -16,6 +16,9 @@
     "tmi.js": "^1.8.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.4",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.4",
     "nodemon": "^2.0.12"
   }
 }
